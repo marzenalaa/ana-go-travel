@@ -1,28 +1,37 @@
 "use client";
+
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { heroSection } from "../../data/siteData";
-import Image from "next/image";
+import { Button } from "../ui";
+
 const HeroSection = () => {
   const { title, subtitle, description, href, textButton, desert, mecca } =
     heroSection;
   return (
     <header
-      className="min-h-screen bg-cover bg-center overflow-hidden text-white py-4"
-      style={{ backgroundImage: `url('../../assets/images/background.png')` }}
+      className="relative max-h-full bg-cover bg-center overflow-hidden pt-24 md:pt-0"
       role="img"
-      aria-label=""
-      id="Header"
+      id="header"
     >
+      <div className="absolute inset-0 -z-10">
+        <Image
+          src="/assets/images/background.png"
+          alt="Background"
+          layout="fill"
+          objectFit="cover"
+          priority
+        />
+      </div>
       <motion.div
-        initial={{ opacity: 0, y: 100 }}
+        initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1.5, ease: "easeOut" }}
-        viewport={{ once: true }}
-        className="container flex flex-col items-center justify-center max-h-max lg:h-screen"
+        transition={{ duration: 1, ease: "easeOut" }}
+        className="container flex flex-col items-center justify-center h-full sm:h-screen"
       >
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-          <div className="">
-            <p className="text-primary text-lg max-w-2xl mx-auto opacity-60 mb-2">
+          <div>
+            <p className="text-primary text-lg max-w-2xl opacity-60 mb-2">
               {subtitle}
             </p>
             <h1 className="text-black text-4xl sm:text-5xl md:text-[64px] max-w-3xl font-semibold mb-8">
@@ -31,21 +40,21 @@ const HeroSection = () => {
                 {title}
               </span>
             </h1>
-
-            <p className="text-black text-lg max-w-2xl mx-auto">
-              {description}
-            </p>
-            <button className="mt-10 px-5 py-2 bg-white text-primary rounded-full border-2 border-primary hover:bg-primary hover:text-white transition-all duration-300 ease-in-out">
-              <a href={href}>{textButton}</a>
-            </button>
+            <p className="text-black text-lg max-w-2xl">{description}</p>
+            <Button text={textButton} href={href} className="w-full md:w-52" />
           </div>
           <div className="relative">
-            <Image src={mecca} alt="" width={260} className="absolute top-2" />
+            <Image
+              src={mecca}
+              alt="Mecca view"
+              width={260}
+              className="block mx-auto lg:absolute lg:top-2"
+            />
             <Image
               src={desert}
-              alt=""
+              alt="Desert landscape"
               width={260}
-              className="absolute top-14 right-0"
+              className="absolute top-12 right-0 hidden sm:block"
             />
           </div>
         </div>

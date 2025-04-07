@@ -2,31 +2,22 @@
 
 import Image from "next/image";
 import { aboutSection } from "../../data/siteData";
-import Heading from "../ui/Heading";
-import { BadgeCheck } from "lucide-react";
+import { Button, Heading, FeaturesCard, FeaturesWhyCard } from "../ui";
 
 const AboutSection = () => {
   const { title, subtitle, description, image, features, buttonTitle, whyUs } =
     aboutSection;
   const { titleWhy, featuresWhy } = whyUs;
   return (
-    <section className="py-16" id="about">
+    <section className="py-6 sm:py-16 mt-12" id="about">
       <div className="container flex flex-col md:flex-row items-center justify-between flex-wrap gap-4 mb-12">
         {features.map((feature, index) => (
-          <div className="flex gap-6 mx-auto w-full md:w-auto" key={index}>
-            <div className="flex items-center justify-center">
-              {feature.icon}
-            </div>
-            <div>
-              <h3 className="mb-1 text-lg font-medium">{feature.title}</h3>
-              <p className="text-gray-700">{feature.description}</p>
-            </div>
-          </div>
+          <FeaturesCard key={index} {...feature} />
         ))}
       </div>
-      <div className="border-t-[1px]"></div>
-      <div className="container flex justify-evenly my-12">
-        <div className="flex justify-center items-center w-1/2">
+      <div className="border-t border-gray-200 my-6"></div>
+      <div className="container flex flex-col-reverse lg:flex-row justify-evenly gap-4 my-12">
+        <div className="flex justify-center items-center w-full lg:w-1/2 mt-10 lg:mt-0">
           <Image
             src={image}
             alt="About"
@@ -35,25 +26,16 @@ const AboutSection = () => {
             className="rounded-lg p-2 bg-primary/25"
           />
         </div>
-        <div className="w-1/2">
-          <Heading title={title} subtitle={subtitle} className={`text-left`} />
+        <div className="w-full lg:w-1/2 text-center lg:text-left">
+          <Heading title={title} subtitle={subtitle} />
           <p className="text-gray-900 my-6">{description}</p>
           <div>
-            <h4 className="my-4 font-medium text-primary">{titleWhy}</h4>
+            <h3 className="my-4 font-semibold text-primary">{titleWhy}</h3>
             {featuresWhy.map((feature, index) => (
-              <div key={index} className="flex items-center my-2 gap-1">
-                <BadgeCheck size={15} className="text-primary mr-1" />
-                <h5 className="font-medium">{`${feature.title} : `}</h5>
-                <p className="text-gray-900 text-sm">
-                  {" "}
-                  {` ${feature.description}.`}
-                </p>
-              </div>
+              <FeaturesWhyCard key={index} {...feature} />
             ))}
           </div>
-          <button className="mt-8 px-5 py-2 bg-white text-primary rounded-full border-2 border-primary hover:bg-primary hover:text-white transition-all duration-300 ease-in-out">
-            <a href={``}>{buttonTitle}</a>
-          </button>
+          <Button text={buttonTitle} href={`/about`} />
         </div>
       </div>
     </section>

@@ -2,6 +2,7 @@ import Image from "next/image";
 import { company, navigation } from "../../data/siteData";
 import Link from "next/link";
 import { PhoneCall } from "lucide-react";
+import Button from "../ui/Button";
 
 const Navbar = () => {
   const { name, logo, phone } = company;

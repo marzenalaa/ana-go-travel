@@ -1,0 +1,29 @@
+.swiper-button-prev,
+.swiper-button-next {
+  color: #fe504f !important;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  color: #c83a36 !important;
+}
+
+.swiper-pagination-bullet {
+  background: #888 !important;
+  opacity: 0.7;
+  width: 10px !important;
+  height: 10px !important;
+  margin: 0 5px !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: #fe504f !important;
+  opacity: 1;
+  width: 12px !important;
+  height: 12px !important;
+}
+
+.swiper-pagination-bullet:hover {
+  background: #c83a36 !important;
+  cursor: pointer;
+}

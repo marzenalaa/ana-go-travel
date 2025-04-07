@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 interface buttonProps {
   text: string;
   href: string;
@@ -5,8 +7,10 @@ interface buttonProps {
 }
 const Button = ({ text, href, className }: buttonProps) => {
   return (
-    <button className={`py-3 px-8 rounded-lg font-medium ${className}`}>
-      <a href={href}>{text}</a>
+    <button
+      className={`mt-10 px-5 py-2 bg-white text-primary rounded-full border-2 border-primary hover:bg-primary hover:text-white transition-all duration-300 ease-in-out ${className}`}
+    >
+      <Link href={href}>{text}</Link>
     </button>
   );
 };

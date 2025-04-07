@@ -7,11 +7,13 @@ const ContactSection = () => {
     contactSection;
   return (
     <section className="container h-full my-20" id="contact">
-      <Heading title={title} subtitle={subtitle} />
-      <p className="text-lg md:w-3/5 w-full py-4 text-center mx-auto">
-        {description}
-      </p>
-      <div className="relative bg-primary/10 rounded-3xl p-12 my-12 flex flex-col md:flex-row justify-between items-center">
+      <Heading
+        title={title}
+        subtitle={subtitle}
+        description={description}
+        className="text-center"
+      />
+      {/* <div className="relative bg-primary/10 rounded-3xl p-12 my-12 flex flex-col md:flex-row justify-between items-center">
         <form className="w-full md:w-2/3">
           <div className="grid grid-cols-1 gap-6">
             <div>
@@ -55,11 +57,7 @@ const ContactSection = () => {
               ></textarea>
             </div>
             <div>
-              <Button
-                text="Send Message"
-                href="#"
-                className="bg-black text-white mt-8 w-full md:w-64"
-              />
+              <Button text="Send Message" href="#" className="w-full md:w-64" />
             </div>
           </div>
         </form>
@@ -70,7 +68,7 @@ const ContactSection = () => {
           alt="Contact Illustration"
           className="hidden md:block absolute right-5"
         />
-      </div>
+      </div> */}
     </section>
   );
 };

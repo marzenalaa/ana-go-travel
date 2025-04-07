@@ -4,6 +4,8 @@ import {
   ServicesSection,
   OffersSection,
   ContactSection,
+  CommitmentSection,
+  VisaSection,
 } from "@/components";
 
 const Home = () => {
@@ -12,6 +14,8 @@ const Home = () => {
       <HeroSection />
       <AboutSection />
       <ServicesSection />
+      <CommitmentSection />
+      <VisaSection />
       <OffersSection />
       <ContactSection />
     </main>
