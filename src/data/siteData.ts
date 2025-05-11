@@ -23,8 +23,8 @@ import {
 } from "react-icons/fa6";
 
 import BgImage from "../../public/assets/images/hero-widget.png";
-import MeccaImage from "../../public/assets/images/mecca.png";
-import DesertImage from "../../public/assets/images/desert.png";
+// import MeccaImage from "../../public/assets/images/mecca.png";
+// import DesertImage from "../../public/assets/images/desert.png";
 import HeroImage from "../../public/assets/images/mecca-desert.png";
 import AboutImage from "../../public/assets/images/about.png";
 import ContactImage from "../../public/assets/images/contact.png";

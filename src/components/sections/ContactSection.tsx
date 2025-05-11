@@ -1,10 +1,9 @@
-import Image from "next/image";
+// import Image from "next/image";
 import { contactSection } from "../../data/siteData";
 import Heading from "../ui/Heading";
-import Button from "../ui/Button";
+// import Button from "../ui/Button";
 const ContactSection = () => {
-  const { title, subtitle, description, image, email, phone, address } =
-    contactSection;
+  const { title, subtitle, description } = contactSection;
   return (
     <section className="container h-full my-20" id="contact">
       <Heading

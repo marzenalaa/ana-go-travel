@@ -1,11 +1,11 @@
 interface CommitmentCardProps {
-  bgColor: string;
+  // bgColor: string;
   commitmentTitle: string;
   commitmentDescription: string;
   commitmentContent: string[];
 }
 const CommitmentCard = ({
-  bgColor,
+  // bgColor,
   commitmentTitle,
   commitmentDescription,
   commitmentContent,

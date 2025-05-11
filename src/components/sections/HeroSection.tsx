@@ -6,8 +6,7 @@ import { heroSection } from "../../data/siteData";
 import { Button } from "../ui";
 
 const HeroSection = () => {
-  const { title, subtitle, description, href, textButton, heroImage } =
-    heroSection;
+  const { subtitle, description, href, textButton, heroImage } = heroSection;
   return (
     <header
       className="relative max-h-screen bg-cover bg-center overflow-hidden"
