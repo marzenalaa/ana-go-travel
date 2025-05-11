@@ -1,5 +1,5 @@
 const ServicesPage = () => {
-  return <div>ServicesPage</div>;
+  return <div className="container h-screen py-10">ServicesPage</div>;
 };
 
 export default ServicesPage;

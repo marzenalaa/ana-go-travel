@@ -1,5 +1,5 @@
 const ContactPage = () => {
-  return <div>ContactPage</div>;
+  return <div className="container h-screen py-10">ContactPage</div>;
 };
 
 export default ContactPage;

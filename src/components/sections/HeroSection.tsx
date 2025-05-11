@@ -6,11 +6,11 @@ import { heroSection } from "../../data/siteData";
 import { Button } from "../ui";
 
 const HeroSection = () => {
-  const { title, subtitle, description, href, textButton, desert, mecca } =
+  const { title, subtitle, description, href, textButton, heroImage } =
     heroSection;
   return (
     <header
-      className="relative max-h-full bg-cover bg-center overflow-hidden pt-24 md:pt-0"
+      className="relative max-h-screen bg-cover bg-center overflow-hidden"
       role="img"
       id="header"
     >
@@ -27,7 +27,7 @@ const HeroSection = () => {
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, ease: "easeOut" }}
-        className="container flex flex-col items-center justify-center h-full sm:h-screen"
+        className="container flex flex-col items-center justify-center h-full lg:h-screen pt-24 lg:pt-0"
       >
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           <div>
@@ -35,27 +35,24 @@ const HeroSection = () => {
               {subtitle}
             </p>
             <h1 className="text-black text-4xl sm:text-5xl md:text-[64px] max-w-3xl font-semibold mb-8">
-              Welcome to{" "}
-              <span className="relative inline-block after:content-[''] after:block after:h-[10px] after:bg-primary after:w-full">
-                {title}
-              </span>
+              Let’s travel and explore
             </h1>
             <p className="text-black text-lg max-w-2xl">{description}</p>
             <Button text={textButton} href={href} className="w-full md:w-52" />
           </div>
           <div className="relative">
             <Image
-              src={mecca}
+              src={heroImage}
               alt="Mecca view"
-              width={260}
-              className="block mx-auto lg:absolute lg:top-2"
+              // width={}
+              className="mx-auto mb-4 lg:mb-0 lg:absolute lg:top-2"
             />
-            <Image
+            {/* <Image
               src={desert}
               alt="Desert landscape"
-              width={260}
-              className="absolute top-12 right-0 hidden sm:block"
-            />
+              width={250}
+              className="mx-auto lg:mx-0 lg:absolute lg:top-12 lg:right-0"
+            /> */}
           </div>
         </div>
       </motion.div>

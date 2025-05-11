@@ -22,9 +22,10 @@ import {
   FaUsers,
 } from "react-icons/fa6";
 
-import HeroImage from "../../public/assets/images/hero-widget.png";
+import BgImage from "../../public/assets/images/hero-widget.png";
 import MeccaImage from "../../public/assets/images/mecca.png";
 import DesertImage from "../../public/assets/images/desert.png";
+import HeroImage from "../../public/assets/images/mecca-desert.png";
 import AboutImage from "../../public/assets/images/about.png";
 import ContactImage from "../../public/assets/images/contact.png";
 import BusinessVisa from "../../public/assets/images/business-visa.svg";
@@ -82,9 +83,8 @@ export const heroSection = {
     "We are a travel agency that offers the best services to our customers. We provide a wide range of services including flight booking, hotel reservations, and car rentals. Our team of experts is dedicated to providing you with the best travel experience.",
   href: "#services",
   textButton: "Discover More",
-  image: HeroImage,
-  mecca: MeccaImage,
-  desert: DesertImage,
+  image: BgImage,
+  heroImage: HeroImage,
 };
 
 export const aboutSection = {

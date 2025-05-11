@@ -33,7 +33,7 @@ const Footer = () => {
           <h4 className="font-semibold text-lg mb-4">Quick Links</h4>
           <ul>
             {quickLinks.map((link, index) => (
-              <li className="mb-3">
+              <li className="mb-3" key={index}>
                 <Link
                   href={link.link}
                   className="hover:text-primary flex items-center gap-1 transition-transform duration-300 hover:translate-x-2"
